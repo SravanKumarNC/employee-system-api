@@ -4,6 +4,7 @@ import com.sravan.employee.entity.EmployeeEntity;
 import com.sravan.employee.model.Employee;
 import com.sravan.employee.repository.EmployeeRepository;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     private EmployeeRepository employeeRepository;
 
+    @Autowired
     public EmployeeServiceImpl(EmployeeRepository employeeRepository){
         this.employeeRepository = employeeRepository;
     }
